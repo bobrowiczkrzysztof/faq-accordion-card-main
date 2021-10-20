@@ -128,6 +128,7 @@ hr {
   #faq {
     text-align: initial;
     margin-top: 0;
+    margin-right: 4rem;
   }
   .mobile {
     display: none;
