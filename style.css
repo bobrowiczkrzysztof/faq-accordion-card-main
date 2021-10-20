@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  max-width: 100vw;
+}
+
+.card {
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  margin: 4rem 0;
+  background-color: #fff;
+  border-radius: 2rem;
+  min-width: 375px;
+}
+
+.faq-card,
+#faq {
+  position: relative;
+  padding: 0.8rem 1rem;
+  margin: 0 1rem;
+  width: 400px;
+}
+
+.faq-card.active .answer {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  color: hsl(240, 6%, 50%);
+  opacity: 1;
+  /* width: 90%; */
+  transform: scaleY(1);
+  transition: transform 0.3s ease;
+  transition: opacity 0.25s, font-size 0.25s, margin 0.25s, padding 0.25s;
+}
+
+.faq-card.active .icon {
+  transform: translateY(50%) rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-card.active .question {
+  font-weight: 700;
+}
+
+.faq-card.active {
+  max-width: 400px;
+}
+
+#faq {
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+.answer {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: opacity 0.25s, margin 0.25s, padding 0.25s, transform 0.25s;
+}
+
+hr {
+  margin-top: 1rem;
+  border-top: 1px solid hsl(240, 5%, 91%);
+}
+
+.question {
+  position: relative;
+  font-size: 0.9rem;
+  color: hsl(237, 12%, 33%);
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  right: 0;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.container {
+  position: relative;
+}
+
+.illustration-mobile {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-pattern-mobile {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  #faq {
+    text-align: initial;
+    margin-top: 0;
+  }
+  .mobile {
+    display: none;
+  }
+  .card {
+    display: flex;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  .desktop {
+    display: block;
+  }
+  .container {
+    display: flex;
+    height: 80%;
+  }
+
+  .desktop-images {
+    position: relative;
+    z-index: 1;
+  }
+  .illustration-woman-desktop {
+    position: relative;
+    width: 100%;
+    top: 20%;
+    left: -60px;
+  }
+
+  .bg-pattern-desktop {
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    width: 200%;
+  }
+
+  .illustration-box-desktop {
+    position: absolute;
+    top: 40%;
+    left: -9%;
+    z-index: 5;
+  }
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+}
